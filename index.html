@@ -3,23 +3,135 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Office_New</title>
+    <title>A Productive Space</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+  </head>
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/web-gl-test13.json", {onProgress: UnityProgress});
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/web-gl-test16.json", {onProgress: UnityProgress});
     </script>
-  </head>
+  
   <body>
     <div class="webgl-content">
-      <div id="unityContainer" style="width: 900px; height: 635px"></div>
+      <div id="unityContainer" style="width: 100vw; height: 100vh"></div>
       <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">Office_New</div>
+      <p>Look at the plants for up to 72 mins a day for a zero-sum productivity game. Press ESC to show cursor</p>
       </div>
     </div>
-  </body>
+
+<body>
+
+<script type="text/javascript">
+  
+
+var i = 0;
+var data = [
+  {
+    body: 'EMPLOYEES: There is a matter of some importance'
+  },
+
+  {
+    body: 'that the executives would like to share with you.'
+  },
+
+  {
+    body: 'As leaders of a company that was voted one of the'
+  },
+
+  {
+    body: 'five hundred most transparent companies in the'
+  },
+
+    {
+    body: 'San Fernando Valley (Westways Magazine,'
+  },
+
+    {
+    body: 'September 2009), we pride ourselves on addressing'
+  },
+
+    {
+    body: 'any type of situation.'
+  },
+
+    {
+    image: 'http://annasagstrom.com/wp-content/uploads/2016/01/Anna_Sagstrom_resize-800x800.jpg'
+  },
+
+    {
+    body: 'As most of you know, the software department has'
+  },
+
+    {
+    body: 'been busy prepping for the first-quarter release of'
+  },
+
+    {
+    body: 'MPM 3.0, the newest iteration of Production'
+  },
+
+    {
+    body: 'Solutions’ continuing quest for better payroll-'
+  },
+
+    {
+    body: 'processing software. MPM 3.0 will be a game'
+  },
+
+  {
+    body: 'changer, providing our clients with sleeker and'
+  }
+
+];
+
+
+// myAudio = new Audio("ding.mp3");
+
+Notification.requestPermission();
+function notifyMe(data) {
+  if (!("Notification" in window)) {
+    alert("This browser does not support system notifications");
+  }
+  else if (Notification.permission === "granted") {
+    notify();
+  }
+  else if (Notification.permission !== 'denied') {
+    Notification.requestPermission(function (permission) {
+      if (permission === "granted") {
+        notify();
+      }
+
+    });
+  };
+};
+  
+function notify() {
+  var notification = new Notification('New Directions', data[i]);
+  // myAudio.play();
+
+  // notification.onclick = function () {
+// };
+  setTimeout(notification.close.bind(notification), 30000);
+};
+  //   window.open("http://annasagstrom.com");      
+  
+
+setInterval(
+  function() {
+    console.log(data);
+    console.log(data[i]);
+    notifyMe(data[i]);
+    i++;
+ }, 
+4000);
+
+// notifyMe(data[i]);
+
+
+
+</script>
+</body>
 </html>
+
