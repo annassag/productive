@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Office_New",
+"productVersion": "0.1",
+"dataUrl": "web-gl-test9.data.unityweb",
+"wasmCodeUrl": "web-gl-test9.wasm.code.unityweb",
+"wasmFrameworkUrl": "web-gl-test9.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#000000",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.3.0f1"
+}
